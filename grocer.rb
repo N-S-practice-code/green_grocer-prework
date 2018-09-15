@@ -15,7 +15,7 @@ def apply_coupons(cart, coupons)
   r=cart
   coupons.each do |el1|
     if r.keys.include?(el1.keys[0])
-      
+      r[el1.keys[0]][:count]+=(0-el2)
     end
   end
   r
