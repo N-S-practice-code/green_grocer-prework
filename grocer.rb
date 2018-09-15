@@ -29,7 +29,6 @@ def apply_coupons(cart, coupons)
       else
         r[(k+" W/COUPON")][:count]=1
       end
-      coupons.select{|el2| el2[:item]==k}.size
       # puts r[(k+" W/COUPON")].keys
     end
   end
