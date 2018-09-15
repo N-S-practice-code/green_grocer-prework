@@ -14,7 +14,7 @@ end
 
 def apply_coupons(cart, coupons)
   r=cart
-  puts coupons.select{|el| el.keys[0]=="AVOCADO"}.size
+  puts coupons
   # puts r
   coupons.each do |el|
     k=el[:item]
