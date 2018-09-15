@@ -16,6 +16,7 @@ def apply_coupons(cart, coupons)
   r=cart
   puts r.class
   coupons.each do |el|
+    puts el
     k=el.keys[0]
     if r.keys.include?(k)
       r[k][:count]+=(0-el[k][:num])
