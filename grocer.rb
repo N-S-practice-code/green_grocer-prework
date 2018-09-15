@@ -36,9 +36,11 @@ end
 
 def apply_clearance(cart)
   r=cart
-  puts r
-  r.each do |el|
-    
+  # puts r
+  r.each do |k,v|
+    if r[k][:clearance]==true
+      r[k][:price]=
+    end
   end
   r
 end
