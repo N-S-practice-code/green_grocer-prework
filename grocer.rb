@@ -18,7 +18,7 @@ def apply_coupons(cart, coupons)
   # puts r
   coupons.each do |el|
     k=el[:item]
-    if r.keys.include?(k) 
+    if r.keys.include?(k) and r[k][:count] >= el[:num]
       r[k][:count]+=(0-el[:num])
       r[(k+" W/COUPON")]={}
       r[(k+" W/COUPON")][:clearance]=r[k][:clearance]
@@ -52,6 +52,6 @@ def checkout(cart, coupons)
     r+=(r1[k][:price]*r1[k][:count]).round(2)
   end
   r=(r*0.9).round(2) if r>100.0
-  puts r1 if r==27.0
+  puts r1 if r=27.0
   r
 end
