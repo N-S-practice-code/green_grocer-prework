@@ -18,7 +18,7 @@ def apply_coupons(cart, coupons)
   # puts r
   coupons.each do |el|
     k=el[:item]
-    if r.keys.include?(k) and r[k][:count]>el[:num]
+    if r.keys.include?(k) and r[k][:count]>=el[:num]
       r[k][:count]+=(0-el[:num])
       r[(k+" W/COUPON")]={}
       r[(k+" W/COUPON")][:clearance]=r[k][:clearance]
