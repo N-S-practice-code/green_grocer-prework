@@ -1,6 +1,7 @@
 def consolidate_cart(cart)
   r={}
-  cart.each do |el1|
+  cart.each do |el|
+    
     if r.keys.include?(el1.keys[0])
       r[el1.keys[0]][:count]+=1
     else
