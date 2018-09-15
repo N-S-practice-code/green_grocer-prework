@@ -17,10 +17,10 @@ def apply_coupons(cart, coupons)
   coupons.each do |el|
     k=el.keys[0]
     if r.keys.include?(el1.keys[0])
-      r[el1.keys[0]][:count]+=(0-el1[el1.keys[0]][:num])
-      r[(el1.keys[0]+" W/COUPON")]=r[el1.keys[0]]
-      r[(el1.keys[0]+" W/COUPON")][:price]=el1[el1.keys[0]][:cost]
-      r[(el1.keys[0]+" W/COUPON")][:count]=1
+      r[el1.keys[0]][:count]+=(0-el[k][:num])
+      r[(k+" W/COUPON")]=r[k]
+      r[(k+" W/COUPON")][:price]=el[k][:cost]
+      r[(k+" W/COUPON")][:count]=1
     end
   end
   r
