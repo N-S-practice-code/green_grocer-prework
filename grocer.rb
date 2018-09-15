@@ -39,7 +39,7 @@ def apply_clearance(cart)
   # puts r
   r.each do |k,v|
     if r[k][:clearance]==true
-      r[k][:price]=
+      r[k][:price]=r[k][:price]*0.8
     end
   end
   r
