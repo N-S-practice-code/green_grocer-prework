@@ -1,9 +1,13 @@
 def consolidate_cart(cart)
-  r=[]
+  r={}
   cart.each do |el1|
     if r.keys.include?(el1.keys[0])
-      r[el1.keys[0]][]
+      r[el1.keys[0]][:count]+=1
+    else
+      
+    end
   end
+  r
 end
 
 def apply_coupons(cart, coupons)
