@@ -36,6 +36,7 @@ end
 
 def apply_clearance(cart)
   r=cart
+  puts r
   r.each do |el|
     
   end
