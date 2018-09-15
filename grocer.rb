@@ -26,9 +26,8 @@ def apply_coupons(cart, coupons)
       if r[(k+" W/COUPON")].keys.include?(:count)
         puts "test"
         r[(k+" W/COUPON")][:count]+=1
-      else
-        r[(k+" W/COUPON")][:count]=1
       end
+      r[(k+" W/COUPON")][:count]=1
     end
   end
   # puts r
