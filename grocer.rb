@@ -51,5 +51,6 @@ def checkout(cart, coupons)
   r1.each do |k,v|
     r+=(r1[k][:price]*r1[k][:count]).round(2)
   end
+  r=if r>100.0
   r
 end
