@@ -22,6 +22,7 @@ def apply_coupons(cart, coupons)
       r[(k+" W/COUPON")]={}
       r[(k+" W/COUPON")][:clearance]=r[k][:clearance]
       r[(k+" W/COUPON")][:price]=el[:cost]
+      puts r[(k+" W/COUPON")].keys
       if r[(k+" W/COUPON")].keys.include?(:count)
         puts "test"
         r[(k+" W/COUPON")][:count]+=1
