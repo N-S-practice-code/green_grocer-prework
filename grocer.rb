@@ -4,7 +4,7 @@ def consolidate_cart(cart)
     if r.keys.include?(el1.keys[0])
       r[el1.keys[0]][:count]+=1
     else
-      
+      r[[el1.keys[0]]]=el1
     end
   end
   r
