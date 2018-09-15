@@ -48,6 +48,7 @@ def checkout(cart, coupons)
   r1=apply_coupons(cart, coupons)
   r1=apply_clearance(r1)
   r1.each do |k,v|
-    
+    r+=(r1[k][:price]*r1[k][:count]).round(2)
   end
+  r
 end
