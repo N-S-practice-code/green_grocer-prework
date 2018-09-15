@@ -14,7 +14,7 @@ end
 
 def apply_coupons(cart, coupons)
   r=cart
-  puts r
+  puts r.class
   coupons.each do |el|
     k=el.keys[0]
     if r.keys.include?(k)
