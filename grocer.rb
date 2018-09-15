@@ -30,7 +30,8 @@ def apply_coupons(cart, coupons)
 end
 
 def apply_clearance(cart)
-  # code here
+  r=cart
+  r.each
 end
 
 def checkout(cart, coupons)
