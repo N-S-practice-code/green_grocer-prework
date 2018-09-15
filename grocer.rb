@@ -1,7 +1,8 @@
 def consolidate_cart(cart)
   r=[]
   cart.each do |el1|
-    if el1.keys[0]
+    if r.keys.include?(el1.keys[0])
+      r[el1.keys[0]][]
   end
 end
 
