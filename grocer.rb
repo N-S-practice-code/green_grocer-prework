@@ -1,5 +1,7 @@
 def consolidate_cart(cart)
-  cart.each
+  cart.each do |el1|
+    
+  end
 end
 
 def apply_coupons(cart, coupons)
