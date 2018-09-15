@@ -13,7 +13,12 @@ end
 
 def apply_coupons(cart, coupons)
   r=cart
-  coupons.
+  coupons.each do |el1|
+    if r.keys.include?(el1.keys[0])
+      
+    end
+  end
+  r
 end
 
 def apply_clearance(cart)
