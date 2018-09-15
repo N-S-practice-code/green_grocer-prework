@@ -44,6 +44,10 @@ def apply_clearance(cart)
 end
 
 def checkout(cart, coupons)
-  r=apply_coupons(cart, coupons)
-  r
+  r=0
+  r1=apply_coupons(cart, coupons)
+  r1=apply_clearance(r1)
+  r1.each do |k,v|
+    
+  end
 end
