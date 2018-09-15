@@ -16,6 +16,7 @@ def apply_coupons(cart, coupons)
   r=cart
   # puts coupons
   # puts r
+  multi_c=[]
   coupons.each do |el|
     k=el[:item]
     if r.keys.include?(k) and r[k][:count] >= el[:num]
@@ -24,8 +25,12 @@ def apply_coupons(cart, coupons)
       r[(k+" W/COUPON")][:clearance]=r[k][:clearance]
       r[(k+" W/COUPON")][:price]=el[:cost]
       # puts coupons
-      puts k+" W/COUPON"
-      r[(k+" W/COUPON")][:count]=1
+      if multi_c.include?(k+" W/COUPON")
+        r[(k+" W/COUPON")][:count]+=1
+      else
+        multi_c.push(k+" W/COUPON")
+        r[(k+" W/COUPON")][:count]=1
+      end
       # puts r[(k+" W/COUPON")].keys
     end
   end
