@@ -1,12 +1,12 @@
 def consolidate_cart(cart)
   r={}
   cart.each do |el|
-    
-    if r.keys.include?(el1.keys[0])
-      r[el1.keys[0]][:count]+=1
+    k=el.keys[0]
+    if r.keys.include?(k)
+      r[k][:count]+=1
     else
-      r[[el1.keys[0]]]=el1[el1.keys[0]]
-      r[el1.keys[0]][:count]=1
+      r[k]=el[k]
+      r[k][:count]=1
     end
   end
   r
