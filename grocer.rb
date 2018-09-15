@@ -29,7 +29,7 @@ def apply_coupons(cart, coupons)
       else
         r[(k+" W/COUPON")][:count]=1
       end
-      puts [(k+" W/COUPON")][:count]
+      puts r[(k+" W/COUPON")][:count]
       # puts r[(k+" W/COUPON")].keys
     end
   end
