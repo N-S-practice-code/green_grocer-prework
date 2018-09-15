@@ -17,11 +17,11 @@ def apply_coupons(cart, coupons)
   puts r.class
   coupons.each do |el|
     puts el
-    k=el.keys[0]
+    k=el.[:item]
     if r.keys.include?(k)
-      r[k][:count]+=(0-el[k][:num])
+      r[k][:count]+=(0-el[:num])
       r[(k+" W/COUPON")]=r[k]
-      r[(k+" W/COUPON")][:price]=el[k][:cost]
+      r[(k+" W/COUPON")][:price]=el[:cost]
       r[(k+" W/COUPON")][:count]=1
     end
   end
