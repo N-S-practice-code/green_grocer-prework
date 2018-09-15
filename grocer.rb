@@ -22,6 +22,7 @@ def apply_coupons(cart, coupons)
       r[(k+" W/COUPON")]={}
       r[(k+" W/COUPON")][:clearance]=r[k][:clearance]
       r[(k+" W/COUPON")][:price]=el[:cost]
+      if r[]
       r[(k+" W/COUPON")][:count]=1
     end
   end
